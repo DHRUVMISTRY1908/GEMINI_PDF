@@ -52,13 +52,4 @@ A Python application that utilizes the Gemini Pro API to search for answers with
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues or pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Replace placeholders such as `https://your-image-url-here`, `https://your-demo-gif-url-here`, `your-username`, and `your-repository` with actual URLs and repository information. You can also customize the content and styling to better fit your project's branding and requirements.
-
-Additionally, include relevant sections such as "Example" with a demo GIF or screenshot showcasing your application in action, and "Contributing" to encourage contributions from the community. Make sure to include a license file (e.g., `LICENSE`) in your repository as well.
+ to encourage contributions from the community. Make sure to include a license file (e.g., `LICENSE`) in your repository as well.
