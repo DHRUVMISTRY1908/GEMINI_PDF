@@ -29,7 +29,7 @@ def get_text_chunks(text):
 
 def get_vector_store(text_chunks):
     embeddings=GoogleGenerativeAIEmbeddings(model='models/embedding-001')
-    vector_store = FAISS.from_text(text_chunks,embedding=embeddings)
+    vector_store = FAISS.from_texts(text_chunks,embedding=embeddings)
     vector_store.save_local('faiss_index')
 
 def get_conversational_chain():
@@ -53,7 +53,7 @@ def get_conversational_chain():
 def user_input(user_question):
     embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
     
-    new_db = FAISS.load_local("faiss_index", embeddings)
+    new_db = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
     docs = new_db.similarity_search(user_question)
 
     chain = get_conversational_chain()
@@ -87,3 +87,6 @@ def main():
                 text_chunks = get_text_chunks(raw_text)
                 get_vector_store(text_chunks)
                 st.success("Done")
+
+if __name__=='__main__':
+    main()
