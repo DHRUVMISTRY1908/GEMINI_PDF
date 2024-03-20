@@ -1,6 +1,4 @@
-Below is an example of a dynamic and appealing GitHub README template for your project:
 
----
 
 # Gemini Pro API Q&A Search
 
